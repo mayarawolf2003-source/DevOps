@@ -1,0 +1,15 @@
+name: Continuous Deployment
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Simulando Deploy
+        run: echo "Entregando código no servidor de produção..."
