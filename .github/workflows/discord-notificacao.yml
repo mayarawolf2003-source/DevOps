@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: GitHub Action for Discord
-        uses: savagecore/discord-webhook-notify@v1.0.1
+        uses: savagecore/discord-webhook-notify@v1.1.1
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
           title: "🚀 Novo Commit ou PR no GitHub!"
