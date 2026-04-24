@@ -5,10 +5,9 @@ jobs:
   discord:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Run Discord Webhook
-        uses: snid3r/discord-commits@v1.6
+      - name: Notificar Discord
+        uses: appleboy/discord-action@master
         with:
-          webhook: "https://discord.com/api/webhooks/1497320082148298768/USBiW8vzHyh9B4wD6EYyB7MWYxqQJHo5KLzb-o1dDVl2eGXX1z5jPBUa9pD3AC3IhjaV"
-          template: "avatar-with-link"
-          include-extras: true
+          webhook_id: '1497300954352189611'
+          webhook_token: 'uzv31cRFzprmTdsEWoRKUKW9MXmBV_-YPiRNkYLeVO_arm815RjnTxTeLWmsn_8yqyi6'
+          message: "🚀 **Alerta DevOps!**\nNovo commit realizado por: ${{ github.actor }}\nNo repositório: ${{ github.repository }}"
