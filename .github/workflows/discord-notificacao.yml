@@ -1,16 +1,17 @@
-name: Notificar Discord Direto
+name: Discord
 
 on:
   push:
-    branches: [ "main" ]
 
 jobs:
-  discord-alert:
+  discord:
     runs-on: ubuntu-latest
     steps:
-      - name: Enviar Mensagem
-        uses: appleboy/discord-action@master
+      - uses: actions/checkout@v4
+      
+      - name: Run Discord Webhook
+        uses: Snid3r/discord-commits@v1.6
         with:
-          webhook_id: 'https://discord.com/api/webhooks/1497300954352189611/uzv31cRFzprmTdsEWoRKUKW9MXmBV_-YPiRNkYLeVO_arm815RjnTxTeLWmsn_8yqyi6'
-          webhook_token: 'https://discord.com/api/webhooks/1497300954352189611/uzv31cRFzprmTdsEWoRKUKW9MXmBV_-YPiRNkYLeVO_arm815RjnTxTeLWmsn_8yqyi6'
-          message: "🚀 Alerta de Commit! O usuário ${{ github.actor }} atualizou o repositório."
+          webhook: "https://discord.com/api/webhooks/1497300954352189611/uzv31cRFzprmTdsEWoRKUKW9MXmBV_-YPiRNkYLeVO_arm815RjnTxTeLWmsn_8yqyi6"
+          template: "avatar-with-link"
+          include-extras: true
