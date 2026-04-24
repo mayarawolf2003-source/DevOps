@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run Discord Webhook
-        uses: Snid3r/discord-commits@v1.6
+        uses: snid3r/discord-commits@v1.6
         with:
           webhook: "https://discord.com/api/webhooks/1497300917454901391/ScEM6upvEPSbbK6kslka5fOPk38jMy5BiwD8nKsEQvGGzEWq4Lr7oIXAB97UNNXmpr3X"
           template: "avatar-with-link"
