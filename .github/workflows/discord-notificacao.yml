@@ -1,19 +1,16 @@
-name: Notificar Discord
+name: Notificar Discord Direto
 
 on:
   push:
-    branches: [ "main", "desenvolvimento" ]
-  pull_request:
     branches: [ "main" ]
 
 jobs:
-  alert-discord:
+  discord-alert:
     runs-on: ubuntu-latest
     steps:
-      - name: GitHub Action for Discord
-        uses: savagecore/discord-webhook-notify@v1.1.1
+      - name: Enviar Mensagem
+        uses: appleboy/discord-action@master
         with:
-          webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
-          title: "🚀 Novo Commit ou PR no GitHub!"
-          description: "O usuário **${{ github.actor }}** fez um push ou PR no repositório **${{ github.repository }}**."
-          username: "Robô DevOps"
+          webhook_id: 'https://discord.com/api/webhooks/1497300954352189611/uzv31cRFzprmTdsEWoRKUKW9MXmBV_-YPiRNkYLeVO_arm815RjnTxTeLWmsn_8yqyi6'
+          webhook_token: 'https://discord.com/api/webhooks/1497300954352189611/uzv31cRFzprmTdsEWoRKUKW9MXmBV_-YPiRNkYLeVO_arm815RjnTxTeLWmsn_8yqyi6'
+          message: "🚀 Alerta de Commit! O usuário ${{ github.actor }} atualizou o repositório."
