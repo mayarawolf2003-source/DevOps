@@ -1,0 +1,20 @@
+name: Notificar Discord
+
+on:
+  push:
+    branches: [ "main", "desenvolvimento" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  alert-discord:
+    runs-on: ubuntu-latest
+    steps:
+      - name: GitHub Action for Discord
+        uses: savagecore/discord-webhook-notify@v1.0.1
+        with:
+          webhook-url: ${{ secrets.DISCORD_WEBHOOK }} # Puxa da Secret que criamos
+          title: "🚀 Novo Commit ou PR no GitHub!"
+          description: "O usuário **${{ github.actor }}** fez um push ou PR no repositório **${{ github.repository }}**."
+          username: "Robô DevOps"
+          avatar_url: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" # Ícone opcional
