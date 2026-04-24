@@ -9,6 +9,6 @@ jobs:
       - name: Run Discord Webhook
         uses: snid3r/discord-commits@v1.6
         with:
-          webhook: "https://discord.com/api/webhooks/1497300954352189611/uzv31cRFzprmTdsEWoRKUKW9MXmBV_-YPiRNkYLeVO_arm815RjnTxTeLWmsn_8yqyi6"
+          webhook: "https://discord.com/api/webhooks/1497320082148298768/USBiW8vzHyh9B4wD6EYyB7MWYxqQJHo5KLzb-o1dDVl2eGXX1z5jPBUa9pD3AC3IhjaV"
           template: "avatar-with-link"
           include-extras: true
