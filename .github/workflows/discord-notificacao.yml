@@ -10,4 +10,4 @@ jobs:
         with:
           webhook_id: '1497300954352189611'
           webhook_token: 'uzv31cRFzprmTdsEWoRKUKW9MXmBV_-YPiRNkYLeVO_arm815RjnTxTeLWmsn_8yqyi6'
-          message: "🚀 **Alerta DevOps!**\nNovo commit realizado por: ${{ github.actor }}\nNo repositório: ${{ github.repository }}"
+          message: "🚀S2 **Alerta DevOps!**\nNovo commit realizado por: ${{ github.actor }}\nNo repositório: ${{ github.repository }}"
