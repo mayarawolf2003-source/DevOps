@@ -6,3 +6,4 @@ function subtrai(a, b) {
     return a - b; 
 }
 console.log("Sistema de cálculos pronto!");
+module.exports = { somar, subtrair, multiplicar, dividir }; 
